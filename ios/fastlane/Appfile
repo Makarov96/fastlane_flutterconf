@@ -1,0 +1,8 @@
+app_identifier("com.steven.flutterFastlane") # The bundle identifier of your app
+apple_id("estev845@gmail.com") # Your Apple Developer Portal username
+
+itc_team_id("122416848") # App Store Connect Team ID
+team_id("PS665D4U8B") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

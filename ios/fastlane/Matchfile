@@ -1,0 +1,6 @@
+git_url("https://github.com/Makarov96/fastlane-match-strategy")
+storage_mode("git")
+type("development")
+type("appstore")
+app_identifier(["com.steven.flutterFastlane"])
+username("estev845@gmail.com")
