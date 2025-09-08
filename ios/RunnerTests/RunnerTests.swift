@@ -2,11 +2,23 @@ import Flutter
 import UIKit
 import XCTest
 
-class RunnerTests: XCTestCase {
+class RunnerUITests: XCTestCase {
+    override func setUpWithError() throws {
+        continueAfterFailure = false
+    }
 
-  func testExample() {
-    // If you add code to the Runner application, consider adding tests here.
-    // See https://developer.apple.com/documentation/xctest for more information about using XCTest.
-  }
+      @MainActor
+    func testTakeScreenshots() throws {
+       let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
 
+        snapshot("01_SplashScreen")
+
+        // Wait for an element instead of sleep
+        let mainScreen = app.otherElements["main_screen"]
+        XCTAssertTrue(mainScreen.waitForExistence(timeout: 10))
+
+        snapshot("02_MainScreen")
+    }
 }

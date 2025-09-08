@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(fastlane:*)",
+      "Read(//Users/stevencolocho/Library/Logs/snapshot/**)",
+      "Read(//Users/stevencolocho/Library/Caches/tools.fastlane/screenshots/**)",
+      "Bash(bundle exec fastlane run snapshot:*)",
+      "Bash(sed:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

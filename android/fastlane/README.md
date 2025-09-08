@@ -23,10 +23,10 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 increment build number
 
-### android distribute
+### android beta
 
 ```sh
-[bundle exec] fastlane android distribute
+[bundle exec] fastlane android beta
 ```
 
 Deploy on Firebase Distribution

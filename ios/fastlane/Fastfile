@@ -13,26 +13,43 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Setup certificates and provisioning profiles"
-  lane :certificates do
-    match(readonly: true)
-  end
+  ## STEP 1: SETUP CERTIFICATES
+  ##-------------------------------------------------
+  # desc "Setup certificates and provisioning profiles"
+  # lane :certificates do
+  #   match(readonly: true)
+  # end
 
-  lane :get_api_key do
-    app_store_connect_api_key(
-      key_id: ENV["KEY_ID"],
-      issuer_id: ENV["ISSUER_ID"],
-      key_filepath: File.join(Dir.pwd, "AuthKey_M2F2NG2DUP.p8"),
-      in_house: false
-    )
-  end
+  ## STEP 2: SETUP APP STORE CONNECT
+  ##-------------------------------------------------
 
-  desc "Push a new beta build to TestFlight"
-  lane :beta do
-    api_key = get_api_key
-    match(type: "appstore", readonly: true)
-    increment_build_number(xcodeproj: "Runner.xcodeproj")
-    build_app(workspace: "Runner.xcworkspace", scheme: "Runner")
-    upload_to_testflight(api_key: api_key)
-  end
+  # desc "Setup App Store Connect Api"
+  # lane :get_api_key do
+  #   app_store_connect_api_key(
+  #     key_id: ENV["KEY_ID"],
+  #     issuer_id: ENV["ISSUER_ID"],
+  #     key_filepath: File.join(Dir.pwd, "AuthKey_M2F2NG2DUP.p8"),
+  #     in_house: false
+  #   )
+  # end
+
+  ## STEP 3: PUSH A NEW BUILD
+  ##-------------------------------------------------
+
+  # desc "Push a new beta build to TestFlight"
+  # lane :beta do
+  #   api_key = get_api_key
+  #   match(type: "appstore", readonly: true)
+  #   increment_build_number(xcodeproj: "Runner.xcodeproj")
+  #   build_app(workspace: "Runner.xcworkspace", scheme: "Runner")
+  #   upload_to_testflight(api_key: api_key)
+  # end
+
+  ## STEP 4:TAKE SCREENSHOTS
+  ##-------------------------------------------
+
+  # desc "Take screenshots for App Store"
+  # lane :screenshots do
+  #   snapshot
+  # end
 end

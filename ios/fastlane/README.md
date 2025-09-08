@@ -39,6 +39,22 @@ Setup certificates and provisioning profiles
 
 Push a new beta build to TestFlight
 
+### ios screenshots
+
+```sh
+[bundle exec] fastlane ios screenshots
+```
+
+Take screenshots for App Store
+
+### ios build_and_screenshot
+
+```sh
+[bundle exec] fastlane ios build_and_screenshot
+```
+
+Build app and take screenshots
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
