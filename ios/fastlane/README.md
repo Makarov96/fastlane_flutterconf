@@ -29,7 +29,7 @@ Setup certificates and provisioning profiles
 [bundle exec] fastlane ios get_api_key
 ```
 
-
+Setup App Store Connect Api
 
 ### ios beta
 
@@ -46,14 +46,6 @@ Push a new beta build to TestFlight
 ```
 
 Take screenshots for App Store
-
-### ios build_and_screenshot
-
-```sh
-[bundle exec] fastlane ios build_and_screenshot
-```
-
-Build app and take screenshots
 
 ----
 
